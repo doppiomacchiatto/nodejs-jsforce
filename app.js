@@ -12,7 +12,8 @@ var oauth2 = new jsforce.OAuth2({
     loginUrl : '<Your org>',
     clientId : '<Your clientId>',
     clientSecret : '242430930269556811',
-    redirectUri : 'http://localhost:' + port +'/token'
+    //redirectUri : 'http://localhost:' + port +'/token'
+    redirectUri : 'http://fast-mountain-8443.herokuapp.com/token'
 });
 app.set('port', process.env.PORT || 5000);
 app.locals.title = 'sfdc app';
