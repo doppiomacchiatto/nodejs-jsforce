@@ -6,7 +6,6 @@ var logger = require('morgan');
 var http = require('http');
 var app = express();
 var router = express.Router();
-var port = 5000;
 
 var oauth2 = new jsforce.OAuth2({
     // you can change loginUrl to connect to sandbox or prerelease env.
@@ -15,6 +14,7 @@ var oauth2 = new jsforce.OAuth2({
     clientSecret : '242430930269556811',
     redirectUri : 'http://localhost:' + port +'/token'
 });
+app.set('port', process.env.PORT || 5000);
 app.locals.title = 'sfdc app';
 app.locals.emails = '<myemail@gmail.com>';
 app.use(logger('dev'));
