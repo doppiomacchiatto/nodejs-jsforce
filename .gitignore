@@ -16,3 +16,5 @@ ee http://help.github.com/ignore-files/ for more about ignoring files.
 # Ignore all node_modules and Mac's index file
 /node_modules
 .DS_Store
+*.swp
+
