@@ -21,7 +21,6 @@ app.locals.emails = '<myemail@gmail.com>';
 app.use(logger('dev'));
 app.use(favicon(__dirname + '/public/images/favicon.ico'));
 app.engine('html', require('ejs').renderFile);
-app.set('port', port);
 app.set('view engine', 'html');
 
 router.get('/', function (req, res) {
